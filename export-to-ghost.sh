@@ -309,9 +309,9 @@ post_to_ghost() {
     
     local endpoint
     if [[ "$content_type" == "post" ]]; then
-        endpoint="$GHOST_URL/ghost/api/admin/posts/"
+        endpoint="$GHOST_URL/ghost/api/admin/posts/?source=html"
     else
-        endpoint="$GHOST_URL/ghost/api/admin/pages/"
+        endpoint="$GHOST_URL/ghost/api/admin/pages/?source=html"
     fi
     
     log "Posting to Ghost CMS: $endpoint"
